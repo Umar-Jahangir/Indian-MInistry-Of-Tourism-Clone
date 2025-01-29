@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Tourism | Government of India</title>
+    <style>
+        /* General wrapper and font styles */
+        #wrapper.body-wrapper {
+            font-size: 16px;
+            /* Default font size */
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            /* Apply a modern font */
+            background-color: #f4f4f4;
+            /* Light background color */
+            padding: 20px 0;
+        }
+
+        
+
+        /* Inner content container */
+        .container.body-container.inner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        
+        }
+
+        /* Minister role title */
+        .title#page-title {
+            font-size: 18px;
+            color:#22679c;
+            margin-top: 10px;
+        }
+
+        /* Guide text styling */
+        .guide-text {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Table styling */
+        .scroll-table1 table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .scroll-table1 table th,
+        .scroll-table1 table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .scroll-table1 table th {
+            background-color: #f7f7f7;
+            font-weight: bold;
+        }
+
+        /* Tab panel styles */
+        .tabpanel {
+            margin-top: 20px;
+        }
+
+        .tabpanel__tab {
+            display: none;
+        }
+
+        .tabpanel__tablabel {
+            padding: 10px;
+            margin: 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tabpanel__tablabel:hover {
+            background-color: #ddd;
+        }
+
+        .tabpanel__panels {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .tabpanel__panel {
+            display: none;
+        }
+
+        .tabpanel__tab:checked+.tabpanel__tablabel {
+            background-color: #e0e0e0;
+        }
+
+        .tabpanel__tab:checked+.tabpanel__tablabel+.tabpanel__panels .tabpanel__panel {
+            display: block;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .layout__region.layout__region--content {
+                padding: 0 15px;
+            }
+
+            .scroll-table1 table {
+                font-size: 12px;
+            }
+
+            .views-field.views-field-field-image-1.alignleft img {
+                width: 100px;
+                height: 110px;
+            }
+
+            .page-title {
+                font-size: 20px;
+            }
+
+            .title#page-title {
+                font-size: 16px;
+            }
+
+            .tabpanel__tablabel {
+                font-size: 14px;
+            }
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #007bff;
+}
+
+.header .logo img {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.header .title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header .title p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Nav bar section .................................................................................*/
+.navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+
+.header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h5,
+        .header h6 {
+            margin: 0 10px;
+            /* Adjust spacing between headlines */
+        }
+
+        .image-container img {
+            margin: 10px;
+            /* Add spacing between images */
+            height: 100px;
+            /* Set a uniform height for images */
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            /* Distribute space evenly */
+            margin: 20px 0;
+            /* Add margin above and below the tabs */
+        }
+
+        .tabs p {
+            margin: 0 15px;
+            /* Add spacing between tabs */
+            color: #1E90ff;
+            /* Set color for tabs */
+        }
+
+        .tabs p.gray {
+            color: gray;
+            /* Set color for gray tab */
+        }
+/* Footer ................................................................................................................*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer a::after {
+    content: '|';
+    color: #555;
+    margin-left: 10px;
+}
+
+.footer a:last-child::after {
+    content: '';
+}
+
+.lastimage {
+    width: 100%;
+}
+    </style>
+</head>
+
+<body>
+     <img src="data:image/png;base64,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"
+        alt="" height="100">
+    <img src="Assets/whiteforright.jpg" align="right">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swach-bharat.png" align="right" <!--xxx-->
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/visit_india_2023_new.jpg" align="right" alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swachh_bharat.jpg" align="right"alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/utsav_logo1.jpg" align="right" alt="">
+
+   
+
+
+    <!-- Navbar ....................................................................................-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="homeindex.html">Home</a></li>
+            <li>
+
+                <!-- About us -->
+                 <!-- By gaurav -->
+                <a href="#Gaurav">About Us+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="G_Ministry_of_Tourism.html">Ministry of Tourism</a>
+                            <ul class="submenu">
+                                <li><a href="G_Role_function.html">Role and Functions of Ministry</a></li>
+                                <li><a href="G_National_Tourism_Policies.html">National Tourism Policies</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Know your Minister</a>
+                            <ul class="submenu">
+                                <li><a href="G_Minister_gajendra_shekhavat.html">Minister of Tourism - Shri Gajendra Singh Shekhawat</a></li>
+                                <li><a href="G_Minister_suresh_gopi.html">Minister of State - Shri Suresh Gopi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="G_Senior_officers.html">Senior Officers in the Ministry</a></li>
+                        <li><a href="G_Divisions.html">Divisions</a></li>
+                        <li><a href="#">Who's Who</a></li>           <!--Start working-->
+                        <li><a href="#">India Tourism Offices</a></li>        <!--Start working-->
+                        <li><a href="G_finance1.html">Finance</a></li>         
+                        <li><a href="G_IDTC.html">Indian Tourism Development Corporation (ITDC)</a></li>
+                        <li><a href="G_Citizen_Charter.html">Citizen Charter</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Schemes & Guidelines-->
+            <!-- By Jatin -->
+            <li>
+                <a href="#Jatin">Schemes & Guidelines+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Schemes</a></li>
+                        <ul class="submenu">
+                            <li><a href="J_SwadeshDarshan.html">Swadesh Darshan Scheme</a></li>
+                            <li><a href="J_PrashadScheme.html">PRASHAD Scheme</a></li>
+                            <li><a href="J_CBSPscheme.html">CBSP Scheme</a></li>
+                            <li><a href="J_Schemes&Guidelines.html">Guidelines</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+            
+            <!--Parliament Questions-->
+            <li>
+                <a href="#">Parliament Questions+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="G_parlimentqsLS1.html">Parliament Questions M/O tourism - LS</a></li><!--done by gaurav-->
+                            <li><a href="G_parlimentqsRS1.html">Parliament Questions M/O tourism - RS</a></li><!--done by gaurav-->
+                            <li><a href="https://sansad.in/ls/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - LS</a></li><!--Done by umar-->
+                            <li><a href="https://sansad.in/rs/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - RS</a></li> <!--Done by umar-->
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Media-->
+            <!-- By atharva -->
+            <li>
+                <a href="#Atharva">Media+</a>
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="https://tourism.gov.in/sites/default/files/flipbook/north/index.html">Go Beyond Destinations-Flip Book</a></li>    <!-- Done by Umar -->
+                            <li><a href="#">E-Book</a></li>                                  <!-- Start working -->
+                            <li><a href="https://pib.gov.in/Allrel.aspx?reg=3&lang=1" onclick="alert('You are being directed to another page.')">Press Release</a></li>   <!-- Done by umar -->
+                            <li><a href="G_Press_Release1.html">Press Releases M/o Tourism</a></li>              <!-- Done By Gaurav -->
+                            <li><a href="A_Photogallery.html">Photo Gallery</a></li>
+                            <li><a href="A_videogallery.html">Video Gallery</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--RTI-->
+            <!-- By Sahil -->
+            <li><a href="S_RTI_page.html">RTI</a></li>
+
+            <!--Tenders-->
+            <!-- By naina -->
+            <li>
+                <a href="#Naina">Tenders</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="Tenders.html">Tender/RFP</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Public Grievances-->
+            <!-- By Umar -->
+            <li><a href="https://pgportal.gov.in/" onclick="alert('You are being directed to another page.')">Public Grievances</a></li>
+
+            <!--Important Links+-->
+            <li>
+                <a href="#">Important Links+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="Umar">eServices</a>
+                            <ul class="submenu">
+                                <li><a href="https://nidhi.tourism.gov.in/">Online Hotel Project Approval & Classification</a></li><!--Done by umar-->
+                                <li><a href="https://nidhi.tourism.gov.in/">Apply for e-Travel Trade Recognition</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Dekho Apna Desh Webinars</a>
+                            <ul class="submenu">                                      
+                                <li><a href="J_Dekho Apna Desh Webinars1.html">DAD Webinar Series (Season 1)</a></li><!--done by jatin-->
+                                <li><a href="J_Dekho apna desh webinar 2.html">DAD Webinar Series (Season 2)</a></li><!--done by jatin-->
+                                <li><a href="S_DadAKAM.html">DAD Webinar under AKAM</a></li><!--done by sahil-->
+                                <li><a href="A_RegionalLevelGuide.html">DAD Webinar with Regional Level Guides</a></li><!--done by atharva-->
+                            </ul>
+                        </li>
+                        <li><a href="U_YUVATourismClub.html">YUVA Tourism Club</a></li><!--Done by umar-->
+                        <li><a href="https://sd2.tourism.gov.in/AboutUs.aspx">Swadesh Darshan</a></li><!--Done by umar-->
+                        <li><a href="https://dpiit.gov.in/sites/default/files/DPIIT/index.html" onclick="alert('You are being directed to another page.')">India's Geographical Indications (GI) Catalogue</a></li><!--Done by umar-->
+                        <li><a href="https://egazette.gov.in/(S(tr3kmocgjpn3rs03v44z2upa))/default.aspx#" onclick="alert('You are being directed to another page.')">e-Gazette Portal</a></li><!--Done by umar-->
+                        <li>
+                            <a href="#">Bhasha Sangam App</a>
+                            <ul class="submenu">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.multibhashi.mygov.mygov_app&hl=en&gl=IN&pli=1" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - Android</a></li><!--Done by umar-->
+                                <li><a href="https://apps.apple.com/in/app/bhasha-sangam/id1580432719" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Umar">Latest Program Application Download</a>
+                            <ul class="submenu">
+                                <li><a href="U_LatestProgramApplication-Android.html">Latest Program Application - Android</a></li><!--Done by umar-->
+                                <li><a href="U_LatestProgramApplication-iOS.html">Latest Program Application - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Achivements-->
+            <!-- By Umar -->
+            <li><a href="U_UserAchievement.html">Achivements</a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+
+    <hr>
+    <section id="fontSize" class="wrapper body-wrapper " style="font-size: 100%;">
+        <div class="bg-wrapper top-bg-wrapper">
+            <div class="container body-container inner-content">
+                <!--<a id="main-content"></a>-->
+                <div id="cmf-site-full-content" class="layout-content innr-mid-section ">
+                    <div class="region region-content">
+                        <div id="block-mot-content" class="block block-system block-system-main-block">
+
+
+                            <div class="layout layout--onecol">
+                                <div class="layout__region layout__region--content">
+                                    <div class="block-region-content">
+                                        <div
+                                            class="views-element-container block block-views block-views-blockminister-block-2">
+
+
+                                            <div>
+                                                <div
+                                                    class="view view-minister view-id-minister view-display-id-block_2 js-view-dom-id-51b7a1419a7fcf4486469bd20490a261c47db393f10e75e45e817dde68925f42">
+
+
+                                                    <div class="view-header">
+                                                        <strong></strong>
+                                                    </div>
+
+                                                    <div class="view-content">
+                                                        <div class="views-row">
+                                                            <div
+                                                                class="views-field views-field-field-image-1 alignleft">
+                                                                <div class="field-content"><a
+                                                                        href="https://tourism.gov.in/sites/default/files/2024-06/GOPI%20Suresh.jpg"
+                                                                        title="Shri Suresh Gopi"
+                                                                        data-colorbox-gallery="gallery-minister-2512-DDNUKd2trdU"
+                                                                        class="colorbox cboxElement"
+                                                                        data-cbox-img-attrs="{&quot;alt&quot;:&quot;Shri Suresh Gopi&quot;}"><img
+                                                                            src="https://tourism.gov.in/sites/default/files/styles/max_325x325/public/2024-06/GOPI%20Suresh.jpg?itok=5c4o0FoF"
+                                                                            width="128" height="144"
+                                                                            alt="Shri Suresh Gopi" typeof="foaf:Image"
+                                                                            class="image-style-max-325x325">
+
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <h1 style="color: #0262af;"><span
+                                                                    class="field-content">Shri Suresh Gopi</span></h1>
+                                                            <div class="views-field views-field-body">
+                                                                <div class="field-content">
+                                                                    <div class="container">
+                                                                        <h2 class="title" id="page-title">Minister of
+                                                                            State for Tourism</h2>
+
+                                                                        <!-- <div class="guide-text">Swipe to view <svg
+                                                                                class="svg-inline--fa fa-long-arrow-alt-right fa-w-14"
+                                                                                aria-hidden="true" focusable="false"
+                                                                                data-prefix="fa"
+                                                                                data-icon="long-arrow-alt-right"
+                                                                                role="img"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 448 512" data-fa-i2svg="">
+                                                                                <path fill="currentColor"
+                                                                                    d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                                                                                </path> -->
+                                                                            </svg><!-- <i class="fa fa-long-arrow-right"></i> -->
+                                                                        </div>
+                                                                        <div class="scroll-table1">
+                                                                            <table class="users">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <th><strong>Telephone</strong>
+                                                                                        </th>
+                                                                                        <td>011-23714161, 011-23715717
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th><strong>Fax</strong></th>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th><strong>Email id</strong>
+                                                                                        </th>
+                                                                                        <td>mos-tourism[at]gov[dot]in
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th><strong>Office
+                                                                                                Address</strong></th>
+                                                                                        <td>3rd Floor, PTI Building ,
+                                                                                            Parliament Street, New Delhi
+                                                                                            , 110001</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th><strong>Res.
+                                                                                                Address</strong></th>
+                                                                                        <td>&nbsp;</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        &nbsp;
+
+                                                                        <div class="tabpanel"><input checked="checked"
+                                                                                class="tabpanel__tab"
+                                                                                id="tabpanel__tab-1" name="tab"
+                                                                                type="radio"><label
+                                                                                class="tabpanel__tablabel"
+                                                                                for="tabpanel__tab-1">Profile</label>
+                                                                            <input class="tabpanel__tab"
+                                                                                id="tabpanel__tab-2" name="tab"
+                                                                                type="radio"><label
+                                                                                class="tabpanel__tablabel"
+                                                                                for="tabpanel__tab-2"> Staff
+                                                                                Details</label> <input
+                                                                                class="tabpanel__tab"
+                                                                                id="tabpanel__tab-3" name="tab"
+                                                                                type="radio"><label
+                                                                                class="tabpanel__tablabel"
+                                                                                for="tabpanel__tab-3">Press
+                                                                                Releases</label> <input
+                                                                                class="tabpanel__tab"
+                                                                                id="tabpanel__tab-4" name="tab"
+                                                                                type="radio"><label
+                                                                                class="tabpanel__tablabel"
+                                                                                for="tabpanel__tab-4">Foreign
+                                                                                Visits</label>
+
+                                                                            <div class="tabpanel__panels">
+                                                                                <div class="tabpanel__panel"
+                                                                                    id="tabpanel__panel-1">
+                                                                                    <div class="media">
+                                                                                        <div class="media__body">
+                                                                                            <h2
+                                                                                                class="profile-headername">
+                                                                                                &nbsp;</h2>
+
+                                                                                            <div class="guide-text">
+                                                                                                Swipe to view <svg
+                                                                                                    class="svg-inline--fa fa-long-arrow-alt-right fa-w-14"
+                                                                                                    aria-hidden="true"
+                                                                                                    focusable="false"
+                                                                                                    data-prefix="fa"
+                                                                                                    data-icon="long-arrow-alt-right"
+                                                                                                    role="img"
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 448 512"
+                                                                                                    data-fa-i2svg="">
+                                                                                                    <path
+                                                                                                        fill="currentColor"
+                                                                                                        d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                                                                                                    </path>
+                                                                                                </svg><!-- <i class="fa fa-long-arrow-right"></i> -->
+                                                                                            </div>
+                                                                                            <div class="scroll-table1">
+                                                                                                <table class="users">
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="tabpanel__panel"
+                                                                                    id="tabpanel__panel-2">
+                                                                                    <div class="media">
+                                                                                        <div class="media__body">
+                                                                                            <h2>&nbsp;</h2>
+
+                                                                                            <p>&nbsp;</p>
+
+                                                                                            <div class="guide-text">
+                                                                                                Swipe to view <svg
+                                                                                                    class="svg-inline--fa fa-long-arrow-alt-right fa-w-14"
+                                                                                                    aria-hidden="true"
+                                                                                                    focusable="false"
+                                                                                                    data-prefix="fa"
+                                                                                                    data-icon="long-arrow-alt-right"
+                                                                                                    role="img"
+                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                    viewBox="0 0 448 512"
+                                                                                                    data-fa-i2svg="">
+                                                                                                    <path
+                                                                                                        fill="currentColor"
+                                                                                                        d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                                                                                                    </path>
+                                                                                                </svg><!-- <i class="fa fa-long-arrow-right"></i> -->
+                                                                                            </div>
+                                                                                            <div class="scroll-table1">
+                                                                                                <table>
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th
+                                                                                                                scope="col">
+                                                                                                                Name
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                scope="col">
+                                                                                                                Designation
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                scope="col">
+                                                                                                                Email
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                scope="col">
+                                                                                                                Phone
+                                                                                                                Number
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td>Mr.
+                                                                                                                Narain S
+                                                                                                                N</td>
+                                                                                                            <td>PS</td>
+                                                                                                            <td>&nbsp;
+                                                                                                            </td>
+                                                                                                            <td>011-23714161,
+                                                                                                                011-23715717
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="tabpanel__panel"
+                                                                                    id="tabpanel__panel-3">
+                                                                                    <div class="media">
+                                                                                        <div class="media__body">
+                                                                                            <p>For Press Releases
+                                                                                                Information Click Here
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="tabpanel__panel"
+                                                                                    id="tabpanel__panel-4">
+                                                                                    <div class="media">
+                                                                                        <div class="media__body">
+                                                                                            <h2>&nbsp;</h2>
+
+                                                                                            <p>&nbsp;</p>
+
+                                                                                            <p>&nbsp;</p>
+
+                                                                                            <h2>&nbsp;</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+    
+    <!-- Footer............................................................................................................ -->
+    <footer>
+        <div>
+            <div class="footer">
+                <a href="N_SitemapFooter.html">Sitemap</a>
+                <a href="N_WebsitePolicies.html">Website Policies</a>
+                <a href="N_Help.html">Help</a>
+                <a href="N_ContactUs.html">Contact Us</a>
+                <a href="N_TermsandConditions.html">Terms and Conditions</a>
+                <a href="U_footerFeedbackUser.html">Feedback</a>
+                <a href="N_Websiteinfo.html">Web Information Manager</a>
+            </div>
+        </div>
+        
+        <img class="lastimage" src="Assets/endimageHome.jpg">
+    </footer>
+    
+</body>
+
+</html>
