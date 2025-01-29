@@ -1,0 +1,176 @@
+/* General Reset */
+body, ul, li, a, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-container .logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Nav bar section .................................................................................*/
+ .navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: #003366;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chapter-list {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0;
+}
+
+.chapter-list li {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.chapter-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.chapter-list li a {
+    color: #0056b3;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chapter-list li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    font-size: 14px;
+    border-top: 4px solid #ffcc00;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}

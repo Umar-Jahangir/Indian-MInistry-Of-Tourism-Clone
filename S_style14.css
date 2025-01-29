@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Nav bar section .................................................................................*/
+.navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+
+
+/* Program Details Styling */
+.program-details {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-details h2 {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.program-details h3 {
+    font-size: 20px;
+    color: #003366;
+    margin-top: 20px;
+}
+
+.program-details ul {
+    margin: 15px 0;
+}
+
+.program-details li {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+}
+
+.program-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.program-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}

@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+    background-color: #0056b3;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+/* Nav bar section .................................................................................*/
+.navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+
+/* Main Heading Styles */
+.main-heading {
+    text-align: center;
+    margin: 20px;
+    font-size: 24px;
+    color: #0056b3;
+}
+
+/* Table Styles */
+table.annual-plan {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+table.annual-plan th, table.annual-plan td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table.annual-plan th {
+    background-color: #003d80;
+    color: white;
+}
+
+table.annual-plan td {
+    background-color: #f9f9f9;
+}
+
+/* Container for tables */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
