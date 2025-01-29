@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Management - Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Navbar............................................................................................................. */
+        nav {
+            background-color: #333; /* Dark background for the nav bar */
+            padding: 10px 20px; /* Adds spacing around the content */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        nav ul {
+            list-style: none; /* Removes bullet points from list items */
+            display: flex; /* Aligns list items horizontally */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px; /* Spacing between menu items */
+        }
+
+        nav ul li:last-child {
+            margin-right: 0; /* Removes right margin for the last item */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Removes underline from links */
+            color: #fff; /* White text color */
+            font-size: 16px; /* Adjusts font size */
+            font-weight: bold; /* Makes text bold */
+            padding: 8px 12px; /* Adds padding inside links */
+            border-radius: 4px; /* Rounds link corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #555; /* Changes background color on hover */
+            color: #ffcc00; /* Changes text color on hover */
+        }
+
+
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .login-container, .admin-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .admin-panel {
+            display: none;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn {
+            background-color: #dc3545;
+            float: right;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li>
+                <a href="U_footerFeedbackAdmin.html">Feedback</a>
+            </li>
+            <li>
+                <a href="U_AdminAchievement.html">achievements</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login-container" id="loginForm">
+            <h1>Administrator Login</h1>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Enter admin password">
+                <button onclick="login()">Login</button>
+                <div class="error" id="loginError"></div>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div class="admin-panel" id="adminPanel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1>Add New Achievement</h1>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            <div class="form-group">
+                <label for="title">Achievement Title</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <button onclick="addAchievement()">Add Achievement</button>
+            <div class="error" id="formError"></div>
+            <div class="success" id="formSuccess"></div>
+        </div>
+    </div>
+
+    
+    
+
+    <script>
+        const ADMIN_PASSWORD = 'Admin123';
+
+        function login() {
+            const password = document.getElementById('password').value;
+            if (password === ADMIN_PASSWORD) {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                // document.getElementById('loginError').textContent = '';
+            } 
+            
+            else {
+                document.getElementById('loginError').textContent = 'Invalid password';
+            }
+            document.getElementById('adminPassword').value = '';
+        }
+
+        function logout() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('adminPanel').style.display = 'none';
+            // document.getElementById('password').value = '';
+        }
+
+        function addAchievement() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const date = document.getElementById('date').value;
+            const formError = document.getElementById('formError');
+            const formSuccess = document.getElementById('formSuccess');
+
+            if (!title || !description || !date) {
+                formError.textContent = 'Please fill in all fields';
+                formSuccess.textContent = '';
+                return;
+            }
+
+            let achievements = JSON.parse(localStorage.getItem('achievements') || '[]');
+            achievements.push({
+                id: Date.now(),
+                title,
+                description,
+                date
+            });
+            localStorage.setItem('achievements', JSON.stringify(achievements));
+
+            // Clear form
+            document.getElementById('title').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('date').value = '';
+            formError.textContent = '';
+            formSuccess.textContent = 'Achievement added successfully!';
+        }
+    </script>
+</body>
+</html>

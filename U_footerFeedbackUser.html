@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .required {
+            color: red;
+            margin-left: 4px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        input.invalid, select.invalid, textarea.invalid {
+            border-color: red;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .admin-link {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Feedback</h2>
+        <form id="feedbackForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label>Feedback Topic<span class="required">*</span></label>
+                <select id="topic" name="topic" required>
+                    <option value="">- Select -</option>
+                    <option value="content">Content issue</option>
+                    <option value="design">Design issue</option>
+                    <option value="server">Server Issue</option>
+                </select>
+                <div class="error" id="topicError">Please select a topic</div>
+            </div>
+
+            <div class="form-group">
+                <label>Name<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="nameError">Please enter your name</div>
+            </div>
+
+            <div class="form-group">
+                <label>Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label>Feedback<span class="required">*</span></label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                <div class="error" id="feedbackError">Please enter your feedback</div>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+            const form = document.getElementById('feedbackForm');
+            
+            // Reset previous error states
+            const errors = document.getElementsByClassName('error');
+            const inputs = form.getElementsByTagName('input');
+            const selects = form.getElementsByTagName('select');
+            const textareas = form.getElementsByTagName('textarea');
+            
+            [...errors].forEach(error => error.style.display = 'none');
+            [...inputs, ...selects, ...textareas].forEach(input => input.classList.remove('invalid'));
+
+            // Validate topic
+            const topic = document.getElementById('topic');
+            if (!topic.value) {
+                document.getElementById('topicError').style.display = 'block';
+                topic.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate name
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                document.getElementById('nameError').style.display = 'block';
+                name.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailRegex.test(email.value)) {
+                document.getElementById('emailError').style.display = 'block';
+                email.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate feedback
+            const feedback = document.getElementById('feedback');
+            if (!feedback.value.trim()) {
+                document.getElementById('feedbackError').style.display = 'block';
+                feedback.classList.add('invalid');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Create feedback data object
+                const feedbackData = {
+                    topic: topic.value,
+                    name: name.value,
+                    email: email.value,
+                    feedback: feedback.value,
+                    date: new Date().toLocaleString()
+                };
+
+                // Get existing feedback from localStorage
+                let allFeedback = JSON.parse(localStorage.getItem('userFeedback') || '[]');
+                
+                // Add new feedback
+                allFeedback.push(feedbackData);
+                
+                // Save back to localStorage
+                localStorage.setItem('userFeedback', JSON.stringify(allFeedback));
+
+                // Reset form
+                form.reset();
+                alert('Feedback submitted successfully!');
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

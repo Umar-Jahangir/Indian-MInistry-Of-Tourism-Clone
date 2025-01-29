@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Feedback System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar....................................................................... */
+        nav {
+            background-color: #333; /* Dark background for the nav bar */
+            padding: 10px 20px; /* Adds spacing around the content */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        nav ul {
+            list-style: none; /* Removes bullet points from list items */
+            display: flex; /* Aligns list items horizontally */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px; /* Spacing between menu items */
+        }
+
+        nav ul li:last-child {
+            margin-right: 0; /* Removes right margin for the last item */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Removes underline from links */
+            color: #fff; /* White text color */
+            font-size: 16px; /* Adjusts font size */
+            font-weight: bold; /* Makes text bold */
+            padding: 8px 12px; /* Adds padding inside links */
+            border-radius: 4px; /* Rounds link corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #555; /* Changes background color on hover */
+            color: #ffcc00; /* Changes text color on hover */
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-list {
+            margin-top: 2rem;
+        }
+
+        .feedback-item {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .feedback-meta {
+            color: #666;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .btn-red {
+            background-color: #dc3545;
+        }
+
+        .btn-red:hover {
+            background-color: #c82333;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #adminPanel {
+            display: none;
+        }
+
+        .user-link {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="U_footerFeedbackAdmin.html">Feedback</a>
+            </li>
+            <li>
+                <a href="U_AdminAchievement.html">achievements</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Login Form -->
+    <div id="loginForm" class="login-container">
+        <h2>Administrator Login</h2>
+        <div>
+            <input type="password" id="adminPassword" placeholder="Enter admin password">
+            <button onclick="adminLogin()">Login</button>
+        </div>
+    </div>
+
+
+    
+    <!-- Admin Panel ...........................................................................................................-->
+    <div id="adminPanel" class="container">
+        <div class="header">
+            <h2>Feedback Management System</h2>
+            <div>
+                <button onclick="downloadAllFeedback()">Download All Feedback</button>
+                <button onclick="adminLogout()" class="btn-red">Logout</button>
+            </div>
+        </div>
+
+        <div id="feedbackList" class="feedback-list">
+            <!-- for Feedback items that will appear here -->
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = 'admin123'; // password to login on admin side
+
+        function adminLogin() {
+            const password = document.getElementById('adminPassword').value;
+            if (password === ADMIN_PASSWORD) {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadFeedback();
+            } else {
+                alert('Invalid administrator password!');
+            }
+            document.getElementById('adminPassword').value = '';
+        }
+
+        function adminLogout() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('adminPanel').style.display = 'none';
+        }
+
+        function loadFeedback() {
+            const feedbackList = document.getElementById('feedbackList');
+            const allFeedback = JSON.parse(localStorage.getItem('userFeedback') || '[]');
+            
+            if (allFeedback.length === 0) {
+                feedbackList.innerHTML = '<p>No feedback entries found.</p>';
+                return;
+            }
+
+            feedbackList.innerHTML = allFeedback.map((entry, index) => `
+                <div class="feedback-item">
+                    <div class="feedback-meta">
+                        <strong>Entry #${index + 1}</strong> | 
+                        Topic: ${entry.topic} | 
+                        Submitted: ${entry.date}
+                    </div>
+                    <div><strong>Name:</strong> ${entry.name}</div>
+                    <div><strong>Email:</strong> ${entry.email}</div>
+                    <div><strong>Feedback:</strong> ${entry.feedback}</div>
+                </div>
+            `).join('');
+        }
+
+        function downloadAllFeedback() {
+            const allFeedback = JSON.parse(localStorage.getItem('userFeedback') || '[]');
+            
+            if (allFeedback.length === 0) {
+                alert('No feedback entries found!');
+                return;
+            }
+
+            let feedbackText = 'All Feedback Entries\n=====================\n\n';
+            allFeedback.forEach((entry, index) => {
+                feedbackText += `Entry #${index + 1}\n`;
+                feedbackText += `Topic: ${entry.topic}\n`;
+                feedbackText += `Name: ${entry.name}\n`;
+                feedbackText += `Email: ${entry.email}\n`;
+                feedbackText += `Feedback: ${entry.feedback}\n`;
+                feedbackText += `Date: ${entry.date}\n`;
+                feedbackText += '----------------------\n\n';
+            });
+
+            const blob = new Blob([feedbackText], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'all_feedback.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
