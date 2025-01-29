@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Release | Ministry Of Tourism | Goverment Of India </title>
+    <style>
+        /* Header section......................................................................................... */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h5,
+.header h6 {
+    margin: 0 10px;
+    /* Adjust spacing between headlines */
+}
+
+.image-container img {
+    margin: 10px;
+    /* Add spacing between images */
+    height: 100px;
+    /* Set a uniform height for images */
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    /* Distribute space evenly */
+    margin: 20px 0;
+    /* Add margin above and below the tabs */
+}
+
+.tabs p {
+    margin: 0 15px;
+    /* Add spacing between tabs */
+    color: #1E90ff;
+    /* Set color for tabs */
+}
+
+.tabs p.gray {
+    color: gray;
+    /* Set color for gray tab */
+}
+
+
+
+
+
+/* Nav bar section .................................................................................*/
+ .navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+/* Footer ................................................................................................................*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer a::after {
+    content: '|';
+    color: #555;
+    margin-left: 10px;
+}
+
+.footer a:last-child::after {
+    content: '';
+}
+
+.lastimage {
+    width: 100%;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            justify-content: center;
+        }
+
+        table {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+        }
+
+        thead {
+            background-color:#0262af;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #eaf5e9;
+        }
+
+        a {
+            color:#0262af;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        time {
+            color: #555;
+            font-style: italic;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: none;
+        }
+        .button{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section ...............................................................................-->
+    <div class="header">
+        <h5>भारत सरकार | GOVERNMENT OF INDIA</h5>
+    </div>
+    </div>
+    <hr>
+
+    <img src="Assets/tigerlogo.jpg" alt="" height="100">
+    <img src="Assets/whiteforright.jpg" align="right">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swach-bharat.png" align="right">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/visit_india_2023_new.jpg" align="right" alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swachh_bharat.jpg" align="right"alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/utsav_logo1.jpg" align="right" alt="">
+   
+
+
+    <!-- Navbar ....................................................................................-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="homeindex.html">Home</a></li>
+            <li>
+
+                <!-- About us -->
+                 <!-- By gaurav -->
+                <a href="#Gaurav">About Us+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="G_Ministry_of_Tourism.html">Ministry of Tourism</a>
+                            <ul class="submenu">
+                                <li><a href="G_Role_function.html">Role and Functions of Ministry</a></li>
+                                <li><a href="G_National_Tourism_Policies.html">National Tourism Policies</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Know your Minister</a>
+                            <ul class="submenu">
+                                <li><a href="G_Minister_gajendra_shekhavat.html">Minister of Tourism - Shri Gajendra Singh Shekhawat</a></li>
+                                <li><a href="G_Minister_suresh_gopi.html">Minister of State - Shri Suresh Gopi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="G_Senior_officers.html">Senior Officers in the Ministry</a></li>
+                        <li><a href="G_Divisions.html">Divisions</a></li>
+                        <li><a href="#">Who's Who</a></li>           <!--Start working-->
+                        <li><a href="#">India Tourism Offices</a></li>        <!--Start working-->
+                        <li><a href="#">Finance</a></li>         <!--Start working-->
+                        <li><a href="G_IDTC.html">Indian Tourism Development Corporation (ITDC)</a></li>
+                        <li><a href="G_Citizen_Charter.html">Citizen Charter</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Schemes & Guidelines-->
+            <!-- By Jatin -->
+            <li>
+                <a href="#Jatin">Schemes & Guidelines+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Schemes</a></li>
+                        <ul class="submenu">
+                            <li><a href="J_SwadeshDarshan.html">Swadesh Darshan Scheme</a></li>
+                            <li><a href="J_PrashadScheme.html">PRASHAD Scheme</a></li>
+                            <li><a href="J_CBSPscheme.html">CBSP Scheme</a></li>
+                            <li><a href="#">Other Schemes</a></li>
+                            <li><a href="#">Guidelines</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+            
+            <!--Parliament Questions-->
+            <li>
+                <a href="#">Parliament Questions+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="#">Parliament Questions M/O tourism - LS</a></li><!-- Start working -->
+                            <li><a href="#">Parliament Questions M/O tourism - RS</a></li><!-- Start working -->
+                            <li><a href="https://sansad.in/ls/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - LS</a></li><!--Done by umar-->
+                            <li><a href="https://sansad.in/rs/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - RS</a></li> <!--Done by umar-->
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Media-->
+            <!-- By atharva -->
+            <li>
+                <a href="#Atharva">Media+</a>
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="https://tourism.gov.in/sites/default/files/flipbook/north/index.html">Go Beyond Destinations-Flip Book</a></li>    <!-- Done by Umar -->
+                            <li><a href="#">E-Book</a></li>                                  <!-- Start working -->
+                            <li><a href="https://pib.gov.in/Allrel.aspx?reg=3&lang=1" onclick="alert('You are being directed to another page.')">Press Release</a></li>   <!-- Done by umar -->
+                            <li><a href="#">Press Releases M/o Tourism</a></li>              <!-- Start working -->
+                            <li><a href="A_Photogallery.html">Photo Gallery</a></li>
+                            <li><a href="A_videogallery.html">Video Gallery</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--RTI-->
+            <!-- By Sahil -->
+            <li><a href="S_RTI_page.html">RTI</a></li>
+
+            <!--Tenders-->
+            <!-- By naina -->
+            <li>
+                <a href="Naina">Tenders</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="Tenders.html">Tender/RFP</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Public Grievances-->
+            <!-- By Umar -->
+            <li><a href="https://pgportal.gov.in/" onclick="alert('You are being directed to another page.')">Public Grievances</a></li>
+
+            <!--Important Links+-->
+            <li>
+                <a href="#">Important Links+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="Umar">eServices</a>
+                            <ul class="submenu">
+                                <li><a href="https://nidhi.tourism.gov.in/">Online Hotel Project Approval & Classification</a></li><!--Done by umar-->
+                                <li><a href="https://nidhi.tourism.gov.in/">Apply for e-Travel Trade Recognition</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Dekho Apna Desh Webinars</a>
+                            <ul class="submenu">                                      <!-- Start working very big -->
+                                <li><a href="#">DAD Webinar Series (Season 1)</a></li>
+                                <li><a href="#">DAD Webinar Series (Season 2)</a></li>
+                                <li><a href="#">DAD Webinar under AKAM</a></li>
+                                <li><a href="#">DAD Webinar with Regional Level Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="U_YUVATourismClub.html">YUVA Tourism Club</a></li><!--Done by umar-->
+                        <li><a href="https://sd2.tourism.gov.in/AboutUs.aspx">Swadesh Darshan</a></li><!--Done by umar-->
+                        <li><a href="https://dpiit.gov.in/sites/default/files/DPIIT/index.html" onclick="alert('You are being directed to another page.')">India's Geographical Indications (GI) Catalogue</a></li><!--Done by umar-->
+                        <li><a href="https://egazette.gov.in/(S(tr3kmocgjpn3rs03v44z2upa))/default.aspx#" onclick="alert('You are being directed to another page.')">e-Gazette Portal</a></li><!--Done by umar-->
+                        <li>
+                            <a href="#">Bhasha Sangam App</a>
+                            <ul class="submenu">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.multibhashi.mygov.mygov_app&hl=en&gl=IN&pli=1" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - Android</a></li><!--Done by umar-->
+                                <li><a href="https://apps.apple.com/in/app/bhasha-sangam/id1580432719" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Umar">Latest Program Application Download</a>
+                            <ul class="submenu">
+                                <li><a href="U_LatestProgramApplication-Android.html">Latest Program Application - Android</a></li><!--Done by umar-->
+                                <li><a href="U_LatestProgramApplication-iOS.html">Latest Program Application - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <table class="views-table views-view-table cols-4">
+        <thead>
+      <tr>
+                                                  <th id="view-counter-table-column" class="views-field views-field-counter" scope="col">S.No.</th>
+                                                  <th id="view-title-table-column" class="views-field views-field-title" scope="col">Title</th>
+                                                  <th id="view-field-date-table-column" class="views-field views-field-field-date" scope="col">Date</th>
+                                                  <th id="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" scope="col">Attachment File</th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">51          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Ministry of Tourism Announces Prequel Events for Mysuru Sangeetha Sugandha Festival 2024          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-10-30          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-11/Press%20Release_30%29Oct_2024.pdf" type="application/pdf; length=129799" lang="en">Press Release_30)Oct_2024.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">52          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Tourism Expansion in India          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-10-03          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-10/PIB2061404.pdf" type="application/pdf; length=55559" lang="en">PIB2061404.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">53          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">“Cleanliness Contributes not only to the Beauty of the Nation but also Encourage Sustainable Tourism Ensuring that Future Generations can Experience the Wonders of Our Country in their Full Glory”: Union Minister Shri Gajendra Singh Shekhawat          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-10-01          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-10/PIB2060769_0.pdf" type="application/pdf; length=143358" lang="en">PIB2060769_0.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">54          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Signing of MoUs Between Institutes Of Hotel Management (IHMS) and Leading Hospitality Groups          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-27          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/Press%20Release__27_Sep_2024.pdf" type="application/pdf; length=201936" lang="en">Press Release__27_Sep_2024.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">55          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Ministry of Tourism Launches Paryatan Mitra and Paryatan Didi – A National Responsible Tourism Initiative          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-27          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2059407.pdf" type="application/pdf; length=90665" lang="en">PIB2059407.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">56          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">India’s initiative of setting up Dashboard for Global Best Practices receives robust support and commendation at G-20 Ministerial Meeting in Brazil.          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-21          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2057411.pdf" type="application/pdf; length=346063" lang="en">PIB2057411.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">57          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">1000 Tribal Home Stays to be promoted under Swadesh Darsan to Boost Local Tourism and Livelihood in Tribal Areas          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-19          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2056682.pdf" type="application/pdf; length=178020" lang="en">PIB2056682.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">58          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">India's participation in IFTM Top Resa 2024 at Paris expected to boost Inbound Tourism          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-18          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2055902.pdf" type="application/pdf; length=167431" lang="en">PIB2055902.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">59          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Ministry of Tourism committed towards Swachhta and reducing pendency during Special Campaign 4.0          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-13          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2054548.pdf" type="application/pdf; length=67847" lang="en">PIB2054548.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter" data-label="S.No.">60          </td>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title">Ministry of Tourism participates in PATA Travel Mart 2024 at Bangkok, Thailand          </td>
+                                                                                        <td headers="view-field-date-table-column" class="views-field views-field-field-date" data-label="Date">2024-09-06          </td>
+                                                                                        <td headers="view-field-attached-1-table-column" class="views-field views-field-field-attached-1" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2024-09/PIB2052551.pdf" type="application/pdf; length=116883" lang="en">PIB2052551.pdf</a></span>
+          </td>
+              </tr>
+      </tbody>
+</table>
+    <div class="button">
+        <a href="G_Press_Release1.html"><button>1</button></a>
+        <a href="G_Press_Release2.html"><button>2</button></a>
+        <a href="G_Press_Release3.html"><button>3</button></a>
+        <a href="G_Press_Release4.html"><button>4</button></a>
+        <a href="G_Press_Release5.html"><button>5</button></a>
+        <a href="G_Press_Release6.html"><button>6</button></a>
+        <a href="G_Press_Release7.html"><button>7</button></a>
+        <a href="G_Press_Release8.html"><button>8</button></a>
+        <a href="G_Press_Release9.html"><button>9</button></a>
+        <a href="G_Press_Release10.html"><button>10</button></a>
+        
+         </div>
+        
+        <!-- Footer............................................................................................................ -->
+        <footer>
+            <div class="footer">
+                <a href="">Sitemap</a>
+                <a href="">Website Policies</a>
+                <a href="">Help</a>
+                <a href="">Contact Us</a>
+                <a href="">Terms and Conditions</a>
+                <a href="">Feedback</a>
+                <a href="">Web Information Manager</a>
+            </div>
+            <img class="lastimage" src="Assets/endimageHome.jpg">
+        </footer>
+        
+        </body>
+        </html>
