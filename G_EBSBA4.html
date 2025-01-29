@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek Bharat Shreshtha Bharat Activities | Ministry Of Tourism | Goverment Of India </title>
+    <style>
+        /* Header section......................................................................................... */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h5,
+.header h6 {
+    margin: 0 10px;
+    /* Adjust spacing between headlines */
+}
+
+.image-container img {
+    margin: 10px;
+    /* Add spacing between images */
+    height: 100px;
+    /* Set a uniform height for images */
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    /* Distribute space evenly */
+    margin: 20px 0;
+    /* Add margin above and below the tabs */
+}
+
+.tabs p {
+    margin: 0 15px;
+    /* Add spacing between tabs */
+    color: #1E90ff;
+    /* Set color for tabs */
+}
+
+.tabs p.gray {
+    color: gray;
+    /* Set color for gray tab */
+}
+
+
+
+
+
+/* Nav bar section .................................................................................*/
+ .navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+/* Footer ................................................................................................................*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer a::after {
+    content: '|';
+    color: #555;
+    margin-left: 10px;
+}
+
+.footer a:last-child::after {
+    content: '';
+}
+
+.lastimage {
+    width: 100%;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+           align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+      
+
+        table {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #0262af;
+            color: white;
+        }
+
+        thead th {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tbody td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        
+
+        .file a {
+            color:#0262af;
+            font-weight: bold;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: none;
+        }
+        .button{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section ...............................................................................-->
+    <div class="header">
+        <h5>भारत सरकार | GOVERNMENT OF INDIA</h5>
+    </div>
+    </div>
+    <hr>
+
+    <img src="Assets/tigerlogo.jpg" alt="" height="100">
+    <img src="Assets/whiteforright.jpg" align="right">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swach-bharat.png" align="right">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/visit_india_2023_new.jpg" align="right" alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swachh_bharat.jpg" align="right"alt="">
+    <img src="https://tourism.gov.in/modules/cmf/cmf_design/images/utsav_logo1.jpg" align="right" alt="">
+   
+
+
+    
+
+
+    <!-- Navbar ....................................................................................-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="homeindex.html">Home</a></li>
+            <li>
+
+                <!-- About us -->
+                 <!-- By gaurav -->
+                <a href="#Gaurav">About Us+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="G_Ministry_of_Tourism.html">Ministry of Tourism</a>
+                            <ul class="submenu">
+                                <li><a href="G_Role_function.html">Role and Functions of Ministry</a></li>
+                                <li><a href="G_National_Tourism_Policies.html">National Tourism Policies</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Know your Minister</a>
+                            <ul class="submenu">
+                                <li><a href="G_Minister_gajendra_shekhavat.html">Minister of Tourism - Shri Gajendra Singh Shekhawat</a></li>
+                                <li><a href="G_Minister_suresh_gopi.html">Minister of State - Shri Suresh Gopi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="G_Senior_officers.html">Senior Officers in the Ministry</a></li>
+                        <li><a href="G_Divisions.html">Divisions</a></li>
+                        <li><a href="#">Who's Who</a></li>           <!--Start working-->
+                        <li><a href="#">India Tourism Offices</a></li>        <!--Start working-->
+                        <li><a href="G_finance1.html">Finance</a></li>         
+                        <li><a href="G_IDTC.html">Indian Tourism Development Corporation (ITDC)</a></li>
+                        <li><a href="G_Citizen_Charter.html">Citizen Charter</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Schemes & Guidelines-->
+            <!-- By Jatin -->
+            <li>
+                <a href="#Jatin">Schemes & Guidelines+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Schemes</a></li>
+                        <ul class="submenu">
+                            <li><a href="J_SwadeshDarshan.html">Swadesh Darshan Scheme</a></li>
+                            <li><a href="J_PrashadScheme.html">PRASHAD Scheme</a></li>
+                            <li><a href="J_CBSPscheme.html">CBSP Scheme</a></li>
+                            <li><a href="J_Schemes&Guidelines.html">Guidelines</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+            
+            <!--Parliament Questions-->
+            <li>
+                <a href="#">Parliament Questions+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="G_parlimentqsLS1.html">Parliament Questions M/O tourism - LS</a></li><!--done by gaurav-->
+                            <li><a href="G_parlimentqsRS1.html">Parliament Questions M/O tourism - RS</a></li><!--done by gaurav-->
+                            <li><a href="https://sansad.in/ls/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - LS</a></li><!--Done by umar-->
+                            <li><a href="https://sansad.in/rs/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - RS</a></li> <!--Done by umar-->
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Media-->
+            <!-- By atharva -->
+            <li>
+                <a href="#Atharva">Media+</a>
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="https://tourism.gov.in/sites/default/files/flipbook/north/index.html">Go Beyond Destinations-Flip Book</a></li>    <!-- Done by Umar -->
+                            <li><a href="#">E-Book</a></li>                                  <!-- Start working -->
+                            <li><a href="https://pib.gov.in/Allrel.aspx?reg=3&lang=1" onclick="alert('You are being directed to another page.')">Press Release</a></li>   <!-- Done by umar -->
+                            <li><a href="G_Press_Release1.html">Press Releases M/o Tourism</a></li>              <!-- Done By Gaurav -->
+                            <li><a href="A_Photogallery.html">Photo Gallery</a></li>
+                            <li><a href="A_videogallery.html">Video Gallery</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--RTI-->
+            <!-- By Sahil -->
+            <li><a href="S_RTI_page.html">RTI</a></li>
+
+            <!--Tenders-->
+            <!-- By naina -->
+            <li>
+                <a href="#Naina">Tenders</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="Tenders.html">Tender/RFP</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Public Grievances-->
+            <!-- By Umar -->
+            <li><a href="https://pgportal.gov.in/" onclick="alert('You are being directed to another page.')">Public Grievances</a></li>
+
+            <!--Important Links+-->
+            <li>
+                <a href="#">Important Links+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="Umar">eServices</a>
+                            <ul class="submenu">
+                                <li><a href="https://nidhi.tourism.gov.in/">Online Hotel Project Approval & Classification</a></li><!--Done by umar-->
+                                <li><a href="https://nidhi.tourism.gov.in/">Apply for e-Travel Trade Recognition</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Dekho Apna Desh Webinars</a>
+                            <ul class="submenu">                                      
+                                <li><a href="J_Dekho Apna Desh Webinars1.html">DAD Webinar Series (Season 1)</a></li><!--done by jatin-->
+                                <li><a href="J_Dekho apna desh webinar 2.html">DAD Webinar Series (Season 2)</a></li><!--done by jatin-->
+                                <li><a href="S_DadAKAM.html">DAD Webinar under AKAM</a></li><!--done by sahil-->
+                                <li><a href="A_RegionalLevelGuide.html">DAD Webinar with Regional Level Guides</a></li><!--done by atharva-->
+                            </ul>
+                        </li>
+                        <li><a href="U_YUVATourismClub.html">YUVA Tourism Club</a></li><!--Done by umar-->
+                        <li><a href="https://sd2.tourism.gov.in/AboutUs.aspx">Swadesh Darshan</a></li><!--Done by umar-->
+                        <li><a href="https://dpiit.gov.in/sites/default/files/DPIIT/index.html" onclick="alert('You are being directed to another page.')">India's Geographical Indications (GI) Catalogue</a></li><!--Done by umar-->
+                        <li><a href="https://egazette.gov.in/(S(tr3kmocgjpn3rs03v44z2upa))/default.aspx#" onclick="alert('You are being directed to another page.')">e-Gazette Portal</a></li><!--Done by umar-->
+                        <li>
+                            <a href="#">Bhasha Sangam App</a>
+                            <ul class="submenu">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.multibhashi.mygov.mygov_app&hl=en&gl=IN&pli=1" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - Android</a></li><!--Done by umar-->
+                                <li><a href="https://apps.apple.com/in/app/bhasha-sangam/id1580432719" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Umar">Latest Program Application Download</a>
+                            <ul class="submenu">
+                                <li><a href="U_LatestProgramApplication-Android.html">Latest Program Application - Android</a></li><!--Done by umar-->
+                                <li><a href="U_LatestProgramApplication-iOS.html">Latest Program Application - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Achivements-->
+            <!-- By Umar -->
+            <li><a href="U_UserAchievement.html">Achivements</a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+    <table class="views-table views-view-table cols-2">
+        <thead>
+      <tr>
+                                                  <th id="view-title-table-column" class="views-field views-field-title" scope="col">Title</th>
+                                                  <th id="view-field-attached-table-column" class="views-field views-field-field-attached" scope="col">Attachment File</th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-get-very-good-tea-front-my-office" hreflang="en">Aaj Ka Vakya: I get very good tea in front of my office.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/40.pdf" type="application/pdf; length=361818" lang="en">40.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-have-lot-work-do-today" hreflang="en">Aaj Ka Vakya: I have a lot of work to do today.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/39.pdf" type="application/pdf; length=341667" lang="en">39.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-letter-has-come-my-office" hreflang="en">Aaj Ka Vakya: A letter has come from my office.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/38.pdf" type="application/pdf; length=341554" lang="en">38.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-bus-service-town-regular" hreflang="en">Aaj Ka Vakya: Is the bus service in this town regular?</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/37.pdf" type="application/pdf; length=343193" lang="en">37.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-it-takes-me-hour-reach-my-office" hreflang="en">Aaj Ka Vakya: It takes me an hour to reach my office.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/36.pdf" type="application/pdf; length=338889" lang="en">36.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-my-home-far-away-my-office" hreflang="en">Aaj Ka Vakya: My home is far away from my office.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-11/35.pdf" type="application/pdf; length=337299" lang="en">35.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-eat-3-omes-day" hreflang="en">Aaj Ka Vakya: I eat 3 Omes a day.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/34.pdf" type="application/pdf; length=335727" lang="en">34.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-please-carry-umbrella-it-may-rain-today" hreflang="en">Aaj Ka Vakya: Please carry an umbrella, it may rain today.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/33.pdf" type="application/pdf; length=325985" lang="en">33.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-always-keep-my-surroundings-clean" hreflang="en">Aaj Ka Vakya: I always keep my surroundings clean.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/32.pdf" type="application/pdf; length=344690" lang="en">32.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-do-you-exercise-every-day" hreflang="en">Aaj Ka Vakya: Do you exercise every day?</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/31.pdf" type="application/pdf; length=300285" lang="en">31.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-it-important-include-fruits-and-vegetables-your-diet" hreflang="en">Aaj Ka Vakya: It is important to include fruits and vegetables in your diet.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/30.pdf" type="application/pdf; length=317336" lang="en">30.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-do-you-take-healthy-diet-every-day" hreflang="en">Aaj Ka Vakya: Do you take a healthy diet every day?</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/29.pdf" type="application/pdf; length=312926" lang="en">29.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-trying-new-varieoes-food" hreflang="en">Aaj Ka Vakya: I like trying new varieOes of food.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/28.pdf" type="application/pdf; length=297959" lang="en">28.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-what-most-popular-sport-place" hreflang="en">Aaj Ka Vakya: What is the most popular sport in this place?</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/27.pdf" type="application/pdf; length=317901" lang="en">27.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-i-go-run-morning" hreflang="en">Aaj Ka Vakya: I like to go for a run in the morning.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/26.pdf" type="application/pdf; length=301533" lang="en">26.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-please-turn-light" hreflang="en">Aaj Ka Vakya: Please turn off the light.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/25.pdf" type="application/pdf; length=289990" lang="en">25.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-novel-very-exciting" hreflang="en">Aaj Ka Vakya: This novel is very exciting.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/24.pdf" type="application/pdf; length=294821" lang="en">24.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-please-take-good-care-yourself" hreflang="en">Aaj Ka Vakya: Please take good care of yourself.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/23.pdf" type="application/pdf; length=301571" lang="en">23.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-what-ome-do-markets-open-morning" hreflang="en">Aaj Ka Vakya: What Ome do the markets open in the morning?</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/22.pdf" type="application/pdf; length=296450" lang="en">22.pdf</a></span>
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-title-table-column" class="views-field views-field-title" data-label="Title"><a href="/aaj-ka-vakya-it-seven-thirty-evening" hreflang="en">Aaj Ka Vakya: It is seven-thirty in the evening.</a>          </td>
+                                                                                        <td headers="view-field-attached-table-column" class="views-field views-field-field-attached" data-label="Attachment File">
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://tourism.gov.in/sites/default/files/2020-10/21.pdf" type="application/pdf; length=317347" lang="en">21.pdf</a></span>
+          </td>
+              </tr>
+      </tbody>
+</table>
+    <div class="button">
+        <a href="G_EBSBA1.html"><button>1</button></a>
+        <a href="G_EBSBA2.html"><button>2</button></a>
+        <a href="G_EBSBA3.html"><button>3</button></a>
+        <a href="G_EBSBA4.html"><button>4</button></a>
+        <a href="G_EBSBA5.html"><button>5</button></a>
+        <a href="G_EBSBA6.html"><button>6</button></a>
+        </div>
+        
+        
+    <!-- Footer............................................................................................................ -->
+    <footer>
+        <div>
+            <div class="footer">
+                <a href="N_SitemapFooter.html">Sitemap</a>
+                <a href="N_WebsitePolicies.html">Website Policies</a>
+                <a href="N_Help.html">Help</a>
+                <a href="N_ContactUs.html">Contact Us</a>
+                <a href="N_TermsandConditions.html">Terms and Conditions</a>
+                <a href="U_footerFeedbackUser.html">Feedback</a>
+                <a href="N_Websiteinfo.html">Web Information Manager</a>
+            </div>
+        </div>
+        
+        <img class="lastimage" src="Assets/endimageHome.jpg">
+    </footer>
+    
+        
+        </body>
+        </html>

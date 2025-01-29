@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Gallery Ministry of Tourism | Government of India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+           
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            color: #004aad;
+            font-size: 1.2em;
+        }
+
+        
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #004aad;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .cmf-site-breadcrumb{
+        display: flex;
+        color: aqua;
+        list-style-type: none;
+        margin: 30px;
+        
+        
+        }
+.Home{
+
+    color: aqua;
+margin: 20px;
+font-size: 25px;
+
+
+}
+
+.breadcrumb{
+    text-decoration: none;
+
+
+}
+
+.archive-btn{
+
+
+background: #0258c7;
+border-radius: 10px;
+padding: 10px;
+color: #f9f9f9;
+text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+
+    
+
+
+    <!-- Navbar ....................................................................................-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="homeindex.html">Home</a></li>
+            <li>
+
+                <!-- About us -->
+                 <!-- By gaurav -->
+                <a href="#Gaurav">About Us+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="G_Ministry_of_Tourism.html">Ministry of Tourism</a>
+                            <ul class="submenu">
+                                <li><a href="G_Role_function.html">Role and Functions of Ministry</a></li>
+                                <li><a href="G_National_Tourism_Policies.html">National Tourism Policies</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Know your Minister</a>
+                            <ul class="submenu">
+                                <li><a href="G_Minister_gajendra_shekhavat.html">Minister of Tourism - Shri Gajendra Singh Shekhawat</a></li>
+                                <li><a href="G_Minister_suresh_gopi.html">Minister of State - Shri Suresh Gopi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="G_Senior_officers.html">Senior Officers in the Ministry</a></li>
+                        <li><a href="G_Divisions.html">Divisions</a></li>
+                        <li><a href="#">Who's Who</a></li>           <!--Start working-->
+                        <li><a href="#">India Tourism Offices</a></li>        <!--Start working-->
+                        <li><a href="G_finance1.html">Finance</a></li>         
+                        <li><a href="G_IDTC.html">Indian Tourism Development Corporation (ITDC)</a></li>
+                        <li><a href="G_Citizen_Charter.html">Citizen Charter</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Schemes & Guidelines-->
+            <!-- By Jatin -->
+            <li>
+                <a href="#Jatin">Schemes & Guidelines+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Schemes</a></li>
+                        <ul class="submenu">
+                            <li><a href="J_SwadeshDarshan.html">Swadesh Darshan Scheme</a></li>
+                            <li><a href="J_PrashadScheme.html">PRASHAD Scheme</a></li>
+                            <li><a href="J_CBSPscheme.html">CBSP Scheme</a></li>
+                            <li><a href="J_Schemes&Guidelines.html">Guidelines</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+            
+            <!--Parliament Questions-->
+            <li>
+                <a href="#">Parliament Questions+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="G_parlimentqsLS1.html">Parliament Questions M/O tourism - LS</a></li><!--done by gaurav-->
+                            <li><a href="G_parlimentqsRS1.html">Parliament Questions M/O tourism - RS</a></li><!--done by gaurav-->
+                            <li><a href="https://sansad.in/ls/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - LS</a></li><!--Done by umar-->
+                            <li><a href="https://sansad.in/rs/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - RS</a></li> <!--Done by umar-->
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Media-->
+            <!-- By atharva -->
+            <li>
+                <a href="#Atharva">Media+</a>
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="https://tourism.gov.in/sites/default/files/flipbook/north/index.html">Go Beyond Destinations-Flip Book</a></li>    <!-- Done by Umar -->
+                            <li><a href="#">E-Book</a></li>                                  <!-- Start working -->
+                            <li><a href="https://pib.gov.in/Allrel.aspx?reg=3&lang=1" onclick="alert('You are being directed to another page.')">Press Release</a></li>   <!-- Done by umar -->
+                            <li><a href="G_Press_Release1.html">Press Releases M/o Tourism</a></li>              <!-- Done By Gaurav -->
+                            <li><a href="A_Photogallery.html">Photo Gallery</a></li>
+                            <li><a href="A_videogallery.html">Video Gallery</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--RTI-->
+            <!-- By Sahil -->
+            <li><a href="S_RTI_page.html">RTI</a></li>
+
+            <!--Tenders-->
+            <!-- By naina -->
+            <li>
+                <a href="#Naina">Tenders</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="Tenders.html">Tender/RFP</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Public Grievances-->
+            <!-- By Umar -->
+            <li><a href="https://pgportal.gov.in/" onclick="alert('You are being directed to another page.')">Public Grievances</a></li>
+
+            <!--Important Links+-->
+            <li>
+                <a href="#">Important Links+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="Umar">eServices</a>
+                            <ul class="submenu">
+                                <li><a href="https://nidhi.tourism.gov.in/">Online Hotel Project Approval & Classification</a></li><!--Done by umar-->
+                                <li><a href="https://nidhi.tourism.gov.in/">Apply for e-Travel Trade Recognition</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Dekho Apna Desh Webinars</a>
+                            <ul class="submenu">                                      
+                                <li><a href="J_Dekho Apna Desh Webinars1.html">DAD Webinar Series (Season 1)</a></li><!--done by jatin-->
+                                <li><a href="J_Dekho apna desh webinar 2.html">DAD Webinar Series (Season 2)</a></li><!--done by jatin-->
+                                <li><a href="S_DadAKAM.html">DAD Webinar under AKAM</a></li><!--done by sahil-->
+                                <li><a href="A_RegionalLevelGuide.html">DAD Webinar with Regional Level Guides</a></li><!--done by atharva-->
+                            </ul>
+                        </li>
+                        <li><a href="U_YUVATourismClub.html">YUVA Tourism Club</a></li><!--Done by umar-->
+                        <li><a href="https://sd2.tourism.gov.in/AboutUs.aspx">Swadesh Darshan</a></li><!--Done by umar-->
+                        <li><a href="https://dpiit.gov.in/sites/default/files/DPIIT/index.html" onclick="alert('You are being directed to another page.')">India's Geographical Indications (GI) Catalogue</a></li><!--Done by umar-->
+                        <li><a href="https://egazette.gov.in/(S(tr3kmocgjpn3rs03v44z2upa))/default.aspx#" onclick="alert('You are being directed to another page.')">e-Gazette Portal</a></li><!--Done by umar-->
+                        <li>
+                            <a href="#">Bhasha Sangam App</a>
+                            <ul class="submenu">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.multibhashi.mygov.mygov_app&hl=en&gl=IN&pli=1" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - Android</a></li><!--Done by umar-->
+                                <li><a href="https://apps.apple.com/in/app/bhasha-sangam/id1580432719" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Umar">Latest Program Application Download</a>
+                            <ul class="submenu">
+                                <li><a href="U_LatestProgramApplication-Android.html">Latest Program Application - Android</a></li><!--Done by umar-->
+                                <li><a href="U_LatestProgramApplication-iOS.html">Latest Program Application - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Achivements-->
+            <!-- By Umar -->
+            <li><a href="U_UserAchievement.html">Achivements</a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container">
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="assets/international tourismmart, 2024.jpeg" alt="International Tourism Mart">
+                
+                <a href ="grid.html"><h3>International Tourism Mart, 2024</h3></a> 
+            </div>
+            <div class="card">
+                <img src="Web mini assets\Chalo india celebration.jpg" alt="Chalo India Celebration">
+                <h3>Chalo India Celebration at Cutty Sark, London</h3>
+            </div>
+            <div class="card">
+                <img src="Web mini assets\World Travel Market.jpg" alt="World Travel Market">
+                <h3>World Travel Market (WTM) 2024, London</h3>
+            </div>
+            <div class="card">
+                <img src="Web mini assets\World tourism Day.jpg" alt="World Tourism Day">
+                <h3>World Tourism Day 2024</h3>
+            </div>
+
+            <div class="card">
+                <img src="Web mini assets\Southern States.jpg" alt="Southern States/ UTs Tourism Ministers Conference">
+                <h3>Southern States/ UTs Tourism Ministers Conference, 2024</h3>
+            </div>
+            <div class="card">
+                <img src="Web mini assets\ST TMC.jpg" alt="Western and Central States / Union Territories…
+                ">
+                <h3>Western and Central States / Union Territories,2024  /h3>
+            </div>
+            <div class="card">
+                <img src="Web mini assets\Boosting Tourism in the South.jpg" alt="Boosting Tourism in the South">
+                <h3>Boosting Tourism in the South</h3>
+            </div>
+            <div class="card">
+                <img src="Web mini assets\NSTT.jpg" alt="Northern States/Union Territory Tourism Minister’s Conference">
+                <h3>Northern States/Union Territory Tourism Minister’s Conference 2024</h3>
+            </div>  
+       
+    </div>
+<div><br>
+
+
+
+    <a class="archive-btn" href="https://tourism.gov.in/media/photo-gallery/photo-gallery-archive" title="Photo Gallery Archive">Photo Gallery Archive</a></div>
+
+    
+    <!-- Footer............................................................................................................ -->
+    <footer>
+        <div>
+            <div class="footer">
+                <a href="N_SitemapFooter.html">Sitemap</a>
+                <a href="N_WebsitePolicies.html">Website Policies</a>
+                <a href="N_Help.html">Help</a>
+                <a href="N_ContactUs.html">Contact Us</a>
+                <a href="N_TermsandConditions.html">Terms and Conditions</a>
+                <a href="U_footerFeedbackUser.html">Feedback</a>
+                <a href="N_Websiteinfo.html">Web Information Manager</a>
+            </div>
+        </div>
+        
+        <img class="lastimage" src="Assets/endimageHome.jpg">
+    </footer>
+    
+</body>
+</html>
