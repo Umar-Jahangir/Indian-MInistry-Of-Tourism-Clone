@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <style>
+          /* Header section......................................................................................... */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h5,
+.header h6 {
+    margin: 0 10px;
+    /* Adjust spacing between headlines */
+}
+
+.image-container img {
+    margin: 10px;
+    /* Add spacing between images */
+    height: 100px;
+    /* Set a uniform height for images */
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    /* Distribute space evenly */
+    margin: 20px 0;
+    /* Add margin above and below the tabs */
+}
+
+.tabs p {
+    margin: 0 15px;
+    /* Add spacing between tabs */
+    color: #1E90ff;
+    /* Set color for tabs */
+}
+
+.tabs p.gray {
+    color: gray;
+    /* Set color for gray tab */
+}
+
+
+
+
+
+/* Nav bar section .................................................................................*/
+ .navbar {
+    background-color: #0053ab;
+    padding: 10px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul :hover {
+    background-color: #c9411e;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    background-color: #c9411e;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c9411e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.dropdown ul li:hover {
+    background-color: #c9411e;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none;
+    top: 0;
+    background-color: #c9411e;
+    min-width: 100px;
+}
+
+/* Show dropdown and submenu on hover */
+.navbar ul li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul li:hover > .submenu {
+    display: block;
+}
+        
+        
+        /* Footer ................................................................................................................*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer a::after {
+    content: '|';
+    color: #555;
+    margin-left: 10px;
+}
+
+.footer a:last-child::after {
+    content: '';
+}
+
+.lastimage {
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+     <!-- Header Section ...............................................................................-->
+   <div class="header">
+    <h5>भारत सरकार | GOVERNMENT OF INDIA</h5>
+</div>
+</div>
+<hr>
+
+<img src="Assets/tigerlogo.jpg" alt="" height="100">
+<img src="Assets/whiteforright.jpg" align="right">
+<img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swach-bharat.png" align="right">
+<img src="https://tourism.gov.in/modules/cmf/cmf_design/images/visit_india_2023_new.jpg" align="right" alt="">
+<img src="https://tourism.gov.in/modules/cmf/cmf_design/images/swachh_bharat.jpg" align="right"alt="">
+<img src="https://tourism.gov.in/modules/cmf/cmf_design/images/utsav_logo1.jpg" align="right" alt="">
+
+
+
+    <!-- Navbar ....................................................................................-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="homeindex.html">Home</a></li>
+            <li>
+
+                <!-- About us -->
+                 <!-- By gaurav -->
+                <a href="#Gaurav">About Us+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="G_Ministry_of_Tourism.html">Ministry of Tourism</a>
+                            <ul class="submenu">
+                                <li><a href="G_Role_function.html">Role and Functions of Ministry</a></li>
+                                <li><a href="G_National_Tourism_Policies.html">National Tourism Policies</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Know your Minister</a>
+                            <ul class="submenu">
+                                <li><a href="G_Minister_gajendra_shekhavat.html">Minister of Tourism - Shri Gajendra Singh Shekhawat</a></li>
+                                <li><a href="G_Minister_suresh_gopi.html">Minister of State - Shri Suresh Gopi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="G_Senior_officers.html">Senior Officers in the Ministry</a></li>
+                        <li><a href="G_Divisions.html">Divisions</a></li>
+                        <li><a href="#">Who's Who</a></li>           <!--Start working-->
+                        <li><a href="#">India Tourism Offices</a></li>        <!--Start working-->
+                        <li><a href="G_finance1.html">Finance</a></li>         
+                        <li><a href="G_IDTC.html">Indian Tourism Development Corporation (ITDC)</a></li>
+                        <li><a href="G_Citizen_Charter.html">Citizen Charter</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Schemes & Guidelines-->
+            <!-- By Jatin -->
+            <li>
+                <a href="#Jatin">Schemes & Guidelines+</a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Schemes</a></li>
+                        <ul class="submenu">
+                            <li><a href="J_SwadeshDarshan.html">Swadesh Darshan Scheme</a></li>
+                            <li><a href="J_PrashadScheme.html">PRASHAD Scheme</a></li>
+                            <li><a href="J_CBSPscheme.html">CBSP Scheme</a></li>
+                            <li><a href="J_Schemes&Guidelines.html">Guidelines</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+            
+            <!--Parliament Questions-->
+            <li>
+                <a href="#">Parliament Questions+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="G_parlimentqsLS1.html">Parliament Questions M/O tourism - LS</a></li><!--done by gaurav-->
+                            <li><a href="G_parlimentqsRS1.html">Parliament Questions M/O tourism - RS</a></li><!--done by gaurav-->
+                            <li><a href="https://sansad.in/ls/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - LS</a></li><!--Done by umar-->
+                            <li><a href="https://sansad.in/rs/questions/questions-and-answers" onclick="alert('You are being directed to another page.')">Parliament Questions other ministers - RS</a></li> <!--Done by umar-->
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Media-->
+            <!-- By atharva -->
+            <li>
+                <a href="#Atharva">Media+</a>
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="https://tourism.gov.in/sites/default/files/flipbook/north/index.html">Go Beyond Destinations-Flip Book</a></li>    <!-- Done by Umar -->
+                            <li><a href="#">E-Book</a></li>                                  <!-- Start working -->
+                            <li><a href="https://pib.gov.in/Allrel.aspx?reg=3&lang=1" onclick="alert('You are being directed to another page.')">Press Release</a></li>   <!-- Done by umar -->
+                            <li><a href="G_Press_Release1.html">Press Releases M/o Tourism</a></li>              <!-- Done By Gaurav -->
+                            <li><a href="A_Photogallery.html">Photo Gallery</a></li>
+                            <li><a href="A_videogallery.html">Video Gallery</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--RTI-->
+            <!-- By Sahil -->
+            <li><a href="S_RTI_page.html">RTI</a></li>
+
+            <!--Tenders-->
+            <!-- By naina -->
+            <li>
+                <a href="#Naina">Tenders</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <ul class="submenu">
+                            <li><a href="Tenders.html">Tender/RFP</a></li> 
+                        </ul>    
+                    </ul>
+                </div>
+            </li>
+
+            <!--Public Grievances-->
+            <!-- By Umar -->
+            <li><a href="https://pgportal.gov.in/" onclick="alert('You are being directed to another page.')">Public Grievances</a></li>
+
+            <!--Important Links+-->
+            <li>
+                <a href="#">Important Links+</a>                                  
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="Umar">eServices</a>
+                            <ul class="submenu">
+                                <li><a href="https://nidhi.tourism.gov.in/">Online Hotel Project Approval & Classification</a></li><!--Done by umar-->
+                                <li><a href="https://nidhi.tourism.gov.in/">Apply for e-Travel Trade Recognition</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Dekho Apna Desh Webinars</a>
+                            <ul class="submenu">                                      
+                                <li><a href="J_Dekho Apna Desh Webinars1.html">DAD Webinar Series (Season 1)</a></li><!--done by jatin-->
+                                <li><a href="J_Dekho apna desh webinar 2.html">DAD Webinar Series (Season 2)</a></li><!--done by jatin-->
+                                <li><a href="S_DadAKAM.html">DAD Webinar under AKAM</a></li><!--done by sahil-->
+                                <li><a href="A_RegionalLevelGuide.html">DAD Webinar with Regional Level Guides</a></li><!--done by atharva-->
+                            </ul>
+                        </li>
+                        <li><a href="U_YUVATourismClub.html">YUVA Tourism Club</a></li><!--Done by umar-->
+                        <li><a href="https://sd2.tourism.gov.in/AboutUs.aspx">Swadesh Darshan</a></li><!--Done by umar-->
+                        <li><a href="https://dpiit.gov.in/sites/default/files/DPIIT/index.html" onclick="alert('You are being directed to another page.')">India's Geographical Indications (GI) Catalogue</a></li><!--Done by umar-->
+                        <li><a href="https://egazette.gov.in/(S(tr3kmocgjpn3rs03v44z2upa))/default.aspx#" onclick="alert('You are being directed to another page.')">e-Gazette Portal</a></li><!--Done by umar-->
+                        <li>
+                            <a href="#">Bhasha Sangam App</a>
+                            <ul class="submenu">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.multibhashi.mygov.mygov_app&hl=en&gl=IN&pli=1" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - Android</a></li><!--Done by umar-->
+                                <li><a href="https://apps.apple.com/in/app/bhasha-sangam/id1580432719" onclick="alert('You are being directed to another page.')">Bhasha Sangam App - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Umar">Latest Program Application Download</a>
+                            <ul class="submenu">
+                                <li><a href="U_LatestProgramApplication-Android.html">Latest Program Application - Android</a></li><!--Done by umar-->
+                                <li><a href="U_LatestProgramApplication-iOS.html">Latest Program Application - iOS</a></li><!--Done by umar-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Achivements-->
+            <!-- By Umar -->
+            <li><a href="U_UserAchievement.html">Achivements</a></li>
+
+        </ul>
+    </nav>
+    <hr>
+
+    <p style="color:  hsl(210, 78%, 37%) ">HOME >> /NODE/{NODE}</p>
+    <hr>
+    <h1 style="color: hsl(210, 78%, 37%); margin-left: 40px;">Help</h1>
+<p style="color: hsl(210, 78%, 37%); margin-left: 40px; margin-top: 20px;">Viewing Information in Various File Formats</p>
+<p >The information provided by this Web site is available in various formats, such as Portable Document Format (PDF), Word, and also in <br>
+     html format. To view the information properly, your browser need to have the required plug-ins or software. For example, the pdf <br>
+      reader software is required to view the pdf format document. In case your system does not have this software, you can download it from <br>
+       the Internet for free. The table lists the required plug-ins needed to view the information in various file formats.</p>
+       <!DOCTYPE html>
+       <html lang="en">
+       
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <style>
+               body {
+                   font-family: Arial, sans-serif;
+               }
+       
+               table {
+                   width: 70%; /* Reduced width */
+                   border-collapse: collapse;
+                   margin-left: 0; /* Align table to left */
+               }
+       
+               th {
+                   background-color:hsl(210, 78%, 37%);
+                   /* Blue color for header */
+                   color: white;
+                   padding: 10px;
+                   text-align: center;
+               }
+       
+               td {
+                   border: 1px solid #ddd;
+                   padding: 8px;
+                   text-align: center;
+               }
+       
+               tr:nth-child(even) {
+                   background-color: #f2f2f2;
+                   /* Light gray for alternating rows */
+               }
+       
+               .title-column {
+                   width: 40%;
+                   /* Extra space for the title column */
+               }
+           </style>
+           <title>HELP</title>
+       </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-left: 0;
+        }
+
+        th {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .title-column {
+            width: 40%;
+        }
+
+        .document-symbol {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .pdf-symbol {
+            color: red;
+        }
+
+        .word-symbol {
+            color: #2d7d8f;
+        }
+
+        .excel-symbol {
+            color: #217346;
+        }
+
+        .powerpoint-symbol {
+            color: #e83e8c;
+        }
+    </style>
+    <title>Document Types and Download Plugins</title>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Document Type</th>
+                <th>Plug-in for Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Portable Document Format (PDF) files</td>
+                <td>
+                    <p style="color: hsl(210, 78%, 37%);"><span class="document-symbol pdf-symbol"><i class="fas fa-file-pdf"></i></span> Adobe Acrobat Reader
+                        <span>Convert a PDF file online into HTML or text format</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Word files</td>
+                <td>
+                    <p style="color: hsl(210, 78%, 37%);"><span class="document-symbol word-symbol"><i class="fas fa-file-word"></i></span> Word Viewer (any version till 2003)
+                        <span>Microsoft Office Compatibility Pack for Word (for 2007 version)</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Excel files</td>
+                <td>
+                    <p style="color: hsl(210, 78%, 37%);"><span class="document-symbol excel-symbol"><i class="fas fa-file-excel"></i></span> Excel Viewer 2003 (any version till 2003)
+                        <span>Microsoft Office Compatibility Pack for Excel (for 2007 version)</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>PowerPoint presentations</td>
+                <td>
+                    <p style="color: hsl(210, 78%, 37%);"><span class="document-symbol powerpoint-symbol"><i class="fas fa-file-powerpoint"></i></span> PowerPoint Viewer 2003 (any version till 2003)
+                        <span>Microsoft Office Compatibility Pack for PowerPoint (for 2007 version)</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+       
+       <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+        
+                table {
+                    width: 70%; /* Reduced width */
+                    border-collapse: collapse;
+                    margin-left: 0; /* Align table to left */
+                }
+        
+                th {
+                    background-color: #1E90FF;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
+        
+                td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                }
+        
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+        
+                .title-column {
+                    width: 40%;
+                }
+            </style>
+            <title>Tender and RFP Table</title>
+        </head>
+        
+        <body>
+        
+        
+            <p style="color: hsl(210, 78%, 37%);">Screen Reader Access</p>
+            <p>The information of the Portal is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes. <br>
+                 Following table lists the information about different screen readers:</p>
+                 <p style="color: rgb(85,80,80);">Information related to the various screen readers</p>
+                 <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }
+            
+                    table {
+                        width: 70%; /* Adjust width */
+                        border-collapse: collapse;
+                        margin-left: 0; /* Align table to left */
+                    }
+            
+                    th {
+                        background-color: #1E90FF;
+                        color: white;
+                        padding: 10px;
+                        text-align: center;
+                    }
+            
+                    td {
+                        border: 1px solid #ddd;
+                        padding: 8px;
+                        text-align: center;
+                    }
+            
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+            
+                    .title-column {
+                        width: 40%;
+                    }
+                </style>
+                <title>Screen Reader Information</title>
+            </head>
+            
+            <body>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Screen Reader</th>
+                            <th>Website</th>
+                            <th>Free/Commercial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Screen Access For All (SAFA)</td>
+                            <td>-----</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Non Visual Desktop Access (NVDA)</td>
+                            <td><a href="http://www.nvda-project.org/" target="_blank">NVDA Website</a></td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>System Access To Go</td>
+                            <td><a href="http://www.satogo.com/" target="_blank">SAToGo Website</a></td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Thunder</td>
+                            <td><a href="http://www.screenreader.net/index.php?pageid=11" target="_blank">Thunder Website</a></td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>WebAnywhere</td>
+                            <td><a href="http://webinsight.cs.washington.edu/wa/content.php" target="_blank">WebAnywhere Website</a></td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Hal</td>
+                            <td><a href="http://www.yourdolphin.co.uk/productdetail.asp?id=5" target="_blank">Hal Website</a></td>
+                            <td>Commercial</td>
+                        </tr>
+                        <tr>
+                            <td>JAWS</td>
+                            <td><a href="http://www.freedomscientific.com/jaws-hq.asp" target="_blank">JAWS Website</a></td>
+                            <td>Commercial</td>
+                        </tr>
+                        <tr>
+                            <td>Supernova</td>
+                            <td><a href="http://www.yourdolphin.co.uk/productdetail.asp?id=1" target="_blank">Supernova Website</a></td>
+                            <td>Commercial</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="color: hsl(210, 78%, 37%);">Accessibility Help</p>
+                <p>Use the accessibility options provided by this Web site to control the screen display. These options allow increasing the text size and <br>
+                    changing the contrast scheme for clear visibility and better readability.</p><br>
+                    <p style="color: rgb(85, 80, 80);">Changing the Text Size</p>
+                    <p>Changing the size of the text refers to making the text appearing Large or Small from its standard size. There are Three options <br>
+                         provided to you to set the size of the text that affect readability. These are:</p>
+                         <p><b>Small:</b>Displays information in a font size smaller than the standard font size.</p>
+                         <p><b>Medium:</b>Displays information in a standard font size, which is the default size.</p>
+                         <p><b>Large:</b>Displays information in a font size larger than the standard font size.</p>
+                         <p>The website allows you to change the text size by clicking on the text size icons present at the top of each page.</p><br>
+                         <p style="color: rgb(85, 80, 80);">Text size Icons</p>
+                         <p>Following different options are provided in the form of icons which are available on the top of each page:</p>
+                         <p><b>A- : Decrease text size:</b> Allows to decrease the text size.</p>
+                         <p><b>A : Normal text size:</b>Allows to set default text size</p>
+                         <p><b>A+ : Increase text size: </b>Allows to increase the text size.</p><br>
+                         <p style="color: rgb(85, 80, 80);">Accessibility Options</p>
+                         <p>To change the text size using the Accessibility Options page:</p>
+                         <p>1. Select <b>Accessibility Options.</b> The Accessibility Options page is displayed.</p>
+                         <p>2.From the <b>Text Size</b> section, select the appropriate text size.</p>
+                         <p>3.Click<b> Apply.</b></p>
+                         <p style="color: hsl(210, 78%, 37%);">Changing the Color Scheme</p>
+                         <p>Changing the color scheme refers to applying a suitable background and text color that ensures clear readability.</p>
+                         <p><b>View Icons</b></p>
+                         <p>Following different options are provided in the form of image icons which are available on each page:</p>
+                         <ul style="color:hsl(210, 78%, 37%);">
+                            <li><p style="color: black;"><b>High Contrast view: </b>Applies the black color as the background and suitable colors to the text on the screen to improve <br>readability</p></li>
+                            <li><p style="color: black;"><b>Standard view: </b>Brings the screen back to its original appearance</p></li>
+                         </ul>
+                         <p>To change the color scheme:</p>
+                         <ul style="color: hsl(210, 78%, 37%);">
+                            <li><p style="color: black;">1. Select <b>Accessibility Options.</b> The Accessibility Options page is displayed.</p></li>
+                            <li><p style="color: black;">2. From the <b>Contrast Schemes</b> section, select the appropriate contrast scheme.</p></li>
+                            <li><p style="color: black;">3.Click <b>Apply</b></p></li>
+                            </ul>
+                         <p><b>Note: </b>Changing the color scheme does not affect the images on the screen.</p>
+
+
+
+                         <br><br><br><br>
+                         <!-- Footer............................................................................................................ -->
+                         <footer>
+                             <div>
+                                 <div class="footer">
+                                     <a href="N_SitemapFooter.html">Sitemap</a>
+                                     <a href="N_WebsitePolicies.html">Website Policies</a>
+                                     <a href="N_Help.html">Help</a>
+                                     <a href="N_ContactUs.html">Contact Us</a>
+                                     <a href="N_TermsandConditions.html">Terms and Conditions</a>
+                                     <a href="U_footerFeedbackUser.html">Feedback</a>
+                                     <a href="N_Websiteinfo.html">Web Information Manager</a>
+                                 </div>
+                             </div>
+                             
+                             <img class="lastimage" src="Assets/endimageHome.jpg">
+                         </footer>
+        </body>
+        
+        </html>
